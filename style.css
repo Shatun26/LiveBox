@@ -6,7 +6,10 @@
 }
 
 body {
-  background-color: #9c9c9c;
+  background-image: url(https://images.wallpaperscraft.ru/image/ozero_gory_domik_136973_3840x2400.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% auto;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,9 +27,8 @@ body {
 }
 
 .boxParent {
-  background-color: #8f8f8f;
-  width: 33.85417vw;
-  height: 33.85417vw;
+  width: 1000px;
+  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,16 +47,13 @@ body {
 }
 
 .boxParent .box {
-  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-          box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  border-radius: 0.26042vw;
-  width: 13.02083vw;
+  border-radius: 1.5625vw;
+  width: 33.85417vw;
   height: 23.4375vw;
-  background-color: #cacaca;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,8 +67,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0.78125vw;
-  row-gap: 0.78125vw;
+  padding: 2.08333vw;
+  row-gap: 1.04167vw;
+  -webkit-backdrop-filter: blur(5px) saturate(150%);
+          backdrop-filter: blur(5px) saturate(150%);
+  background-color: rgba(7, 55, 61, 0.205);
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.9);
+          box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.9);
 }
 
 .boxParent .box:active {
@@ -80,13 +85,11 @@ body {
 }
 
 .boxParent .box .subBox {
-  -webkit-box-shadow: 4px 4px 8px 0px #7a3256;
-          box-shadow: 4px 4px 8px 0px #7a3256;
-  background-color: hotpink;
-  border-radius: 10px;
+  border-radius: 0.78125vw;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  background-color: #86a8b38f;
   width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

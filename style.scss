@@ -8,7 +8,10 @@ $screen-width: 1920;
   @return ($value * 100) / $screen-width + vw;
 }
 body {
-  background-color: rgb(156, 156, 156);
+  background-image: url(https://images.wallpaperscraft.ru/image/ozero_gory_domik_136973_3840x2400.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% auto;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,37 +19,39 @@ body {
   min-height: 100vh;
 }
 .boxParent {
-  background-color: rgb(143, 143, 143);
-  width: px-to-vw(650);
-  height: px-to-vw(650);
+  // border: 1px dashed rgb(90, 90, 90);
+  width: 1000px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   perspective: 700px;
- 
+
   .box {
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     user-select: none;
-    border-radius:px-to-vw(5);
-    width: px-to-vw(250);
+    border-radius: px-to-vw(30);
+    width: px-to-vw(650);
     height: px-to-vw(450);
-    background-color: rgb(202, 202, 202);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: px-to-vw(15);
-    row-gap: px-to-vw(15);
+    padding: px-to-vw(40);
+    row-gap: px-to-vw(20);
+    backdrop-filter: blur(5px) saturate(150%);
+    background-color: rgba(7, 55, 61, 0.205);
+    position: relative;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.9);
     &:active {
       transition: 0.5s;
       transform: rotate(0deg) !important;
     }
     .subBox {
-      box-shadow: 4px 4px 8px 0px rgb(122, 50, 86);
-      background-color: hotpink;
-      border-radius: 10px;
+
+      border-radius: px-to-vw(15);
       flex-grow: 1;
+      background-color: #86a8b38f;
       width: 100%;
     }
   }
