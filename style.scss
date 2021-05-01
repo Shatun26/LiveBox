@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+$screen-width: 1920;
+@function px-to-vw($value) {
+  @return ($value * 100) / $screen-width + vw;
+}
+body {
+  background-color: rgb(156, 156, 156);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.boxParent {
+  background-color: rgb(143, 143, 143);
+  width: px-to-vw(650);
+  height: px-to-vw(650);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 700px;
+ 
+  .box {
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    user-select: none;
+    border-radius:px-to-vw(5);
+    width: px-to-vw(250);
+    height: px-to-vw(450);
+    background-color: rgb(202, 202, 202);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: px-to-vw(15);
+    row-gap: px-to-vw(15);
+    &:active {
+      transition: 0.5s;
+      transform: rotate(0deg) !important;
+    }
+    .subBox {
+      box-shadow: 4px 4px 8px 0px rgb(122, 50, 86);
+      background-color: hotpink;
+      border-radius: 10px;
+      flex-grow: 1;
+      width: 100%;
+    }
+  }
+}
